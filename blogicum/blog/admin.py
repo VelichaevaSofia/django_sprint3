@@ -16,8 +16,8 @@ class PostAdmin(admin.ModelAdmin):
     )
     list_editable = (
         'is_published',
-    )    
-    search_fields = ('title',) 
+    )
+    search_fields = ('title',)
     list_filter = ('category', 'location', 'author')
     list_display_links = ('title', 'category', 'location')
 
@@ -32,7 +32,8 @@ class CategoryAdmin(admin.ModelAdmin):
     )
     list_editable = (
         'is_published',
-    )    
+    )
+
 
 class LocationAdmin(admin.ModelAdmin):
     list_display = (
@@ -42,7 +43,8 @@ class LocationAdmin(admin.ModelAdmin):
     )
     list_editable = (
         'is_published',
-    )  
+    )
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Location, LocationAdmin)

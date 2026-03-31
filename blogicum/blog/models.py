@@ -29,7 +29,7 @@ class Category(models.Model):
         return self.title
 
 
-class Location (models.Model):
+class Location(models.Model):
     name = models.CharField(
         max_length=256,
         verbose_name="Название места")
@@ -41,7 +41,7 @@ class Location (models.Model):
         auto_now_add=True,
         verbose_name="Добавлено")
 
-    class Meta():
+    class Meta:
         verbose_name = "местоположение"
         verbose_name_plural = "Местоположения"
 
@@ -89,6 +89,6 @@ class Post(models.Model):
         verbose_name = "публикация"
         verbose_name_plural = "Публикации"
         ordering = ("-pub_date",)
-    
+
     def __str__(self):
         return self.title
